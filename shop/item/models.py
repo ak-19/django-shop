@@ -25,8 +25,8 @@ class Item(models.Model):
         User, related_name='items', on_delete=models.CASCADE)
     image = models.ImageField(upload_to='item_images', blank=True, null=True)
 
-    # class Meta:
-    #     ordering = ('name', )
+    class Meta:
+        ordering = ('name', )
 
-    # def __str__(self) -> str:
-    #     return self.name
+    def __str__(self) -> str:
+        return self.name
